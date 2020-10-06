@@ -1,0 +1,3 @@
+//GET http://localhost:8088/hello-world
+
+GET http://localhost:8088/hello-world-bean
