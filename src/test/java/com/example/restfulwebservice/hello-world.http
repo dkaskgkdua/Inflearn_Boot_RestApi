@@ -1,3 +1,21 @@
-//GET http://localhost:8088/hello-world
+GET http://localhost:8087/users/
+Accept: application/json
 
-GET http://localhost:8088/hello-world-bean
+###
+GET http://localhost:8087/hello-world-bean
+Accept: application/json
+
+###
+GET http://localhost:8087/hello-world
+Accept: application/json
+
+###
+POST http://localhost:8087/users
+Content-Type: application/json
+
+{
+"name": "New User",
+"joinDate": "2020-10-08T15:10:25.249+0000"
+}
+
+
