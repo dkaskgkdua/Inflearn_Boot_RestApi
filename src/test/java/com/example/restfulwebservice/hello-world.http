@@ -1,3 +1,21 @@
+### 영어
+GET http://localhost:8087/hello-world-internationalized
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Language: en
+
+### 프랑스
+GET http://localhost:8087/hello-world-internationalized
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Language: fr
+
+### 한국어(기본값)
+GET http://localhost:8087/hello-world-internationalized
+Accept: application/json
+Accept-Charset: utf-8
+
+###
 ### 신규데이터 생성(Valid fail)
 POST http://localhost:8087/users
 Content-Type: application/json
