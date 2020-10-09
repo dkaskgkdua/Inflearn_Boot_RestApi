@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class UserController {
     public List<User> retrieveAllUsers() {
         return service.findAll();
     }
+
     @GetMapping("/users/{id}")
     public User retrieveUser(@PathVariable int id) {
         User user = service.findOne(id);
@@ -28,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         User savedUser = service.save(user);
         // created를 생성할 때는 항상 uri를 제공해야함.
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -37,5 +39,13 @@ public class UserController {
                 .toUri();
 
         return ResponseEntity.created(location).build();
+    }
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id) {
+        User user = service.deleteById(id);
+
+        if(user == null) {
+            throw new UserNotFoundException(String.format("ID[%s] not found", id));
+        }
     }
 }

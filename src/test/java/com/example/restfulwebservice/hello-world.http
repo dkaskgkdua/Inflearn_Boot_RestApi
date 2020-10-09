@@ -1,7 +1,25 @@
-GET http://localhost:8087/users/4
+### 신규데이터 생성(Valid fail)
+POST http://localhost:8087/users
+Content-Type: application/json
+
+{
+  "name": "N",
+  "joinDate": "2020-10-08T15:10:25.249+0000"
+}
+
+### 3번 삭제
+DELETE http://localhost:8087/users/3
 Accept: application/json
 
-###
+### 3번 조회 ( 있는 경우 )
+GET http://localhost:8087/users/3
+Accept: application/json
+
+### 100번 조회 ( 없는 경우 )
+GET http://localhost:8087/users/100
+Accept: application/json
+
+### 전체 조회
 GET http://localhost:8087/users/
 Accept: application/json
 
@@ -13,7 +31,7 @@ Accept: application/json
 GET http://localhost:8087/hello-world
 Accept: application/json
 
-###
+### 신규데이터 생성
 POST http://localhost:8087/users
 Content-Type: application/json
 
