@@ -1,3 +1,24 @@
+### produces 사용하기 2
+GET http://localhost:8087/admin/users/1
+Accept: application/vnd.company.appv2+json
+
+### produces 사용하기
+GET http://localhost:8087/admin/users/1
+Accept: application/vnd.company.appv1+json
+
+### 사용자 정의(X-API-VERSION) Header로 하는 방법
+GET http://localhost:8087/admin/users/1
+Accept: application/json
+X-API-VERSION:2
+
+### version=2 파람으로 하는 법
+GET http://localhost:8087/admin/users/1/?version=2
+Accept: application/json
+
+### version=1 파람으로 하는 법
+GET http://localhost:8087/admin/users/1/?version=1
+Accept: application/json
+
 ### admin v2 조회
 GET http://localhost:8087/admin/v2/users/1
 Accept: application/json
