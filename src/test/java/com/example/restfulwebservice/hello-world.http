@@ -1,7 +1,16 @@
+### admin v2 조회
+GET http://localhost:8087/admin/v2/users/1
+Accept: application/json
+
+### admin v1 조회
+GET http://localhost:8087/admin/v1/users/1
+Accept: application/json
+
+### 관리자 전체 조회
 GET http://localhost:8087/admin/users
 Accept: application/json
 
-### admin 조회
+### admin 1개 조회
 GET http://localhost:8087/admin/users/1
 Accept: application/json
 
