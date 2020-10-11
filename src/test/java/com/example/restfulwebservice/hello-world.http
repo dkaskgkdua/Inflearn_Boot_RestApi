@@ -1,8 +1,14 @@
+GET http://localhost:8087/admin/users
+Accept: application/json
+
+### admin 조회
+GET http://localhost:8087/admin/users/1
+Accept: application/json
+
 ### 전체 조회(xml)
 GET http://localhost:8087/users/
 Accept: application/xml
 
-###
 ### 영어
 GET http://localhost:8087/hello-world-internationalized
 Accept: application/json
