@@ -19,6 +19,11 @@
     </properties>
 
     <dependencies>
+        <!-- HAL Browser를 이용한 HATEOAS 구현-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-rest-hal-browser</artifactId>
+        </dependency>
         <!-- 모니터링을 위한 Actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
