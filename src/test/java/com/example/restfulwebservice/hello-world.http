@@ -81,6 +81,8 @@ Accept: application/json
 ### 전체 조회
 GET http://localhost:8087/users/
 Accept: application/json
+Username: username
+Password: passw0ord
 
 ###
 GET http://localhost:8087/hello-world-bean

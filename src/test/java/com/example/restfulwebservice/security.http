@@ -1,0 +1,5 @@
+GET http://localhost:8087/admin/users/1
+Accept: application/json
+Authorization: Basic ${base64(${user} + ":" + ${d5697078-13d8-407a-ae79-b592e4bbaa18})}
+
+###
