@@ -1,3 +1,7 @@
+GET http://localhost:8087/jpa/users/1
+Accept: application/json
+
+### 전체
 GET http://localhost:8087/jpa/users
 Accept: application/json
 
