@@ -1,3 +1,19 @@
+POST http://localhost:8087/jpa/users
+Content-Type: application/json
+
+{
+  "name": "User4",
+  "joinDate": "2020-10-26T15:00:00.000+0000",
+  "password": "test4",
+  "ssn": "901010-1111111"
+}
+
+###
+###
+DELETE http://localhost:8087/jpa/users/1
+Content-Type: application/json
+
+### 일부조회
 GET http://localhost:8087/jpa/users/1
 Accept: application/json
 
