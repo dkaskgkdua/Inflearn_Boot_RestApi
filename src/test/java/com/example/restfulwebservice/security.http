@@ -1,3 +1,15 @@
+POST http://localhost:8087/jpa/users/90001/posts
+Content-Type: application/json
+
+{
+  "description": "My Third post"
+}
+
+###
+GET http://localhost:8087/jpa/users/90001/posts
+Accept: application/json
+
+###
 POST http://localhost:8087/jpa/users
 Content-Type: application/json
 
